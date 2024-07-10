@@ -1,0 +1,187 @@
+{% extends 'Base/base.html' %}
+{% block start %}
+<!-- Start Hero Section -->
+	<div class="hero">
+		<div class="container">
+			<div class="row justify-content-between">
+				<div class="col-lg-5">
+					<div class="intro-excerpt">
+						<h1>Shop</h1>
+					</div>
+				</div>
+				<div class="col-lg-7">
+
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- End Hero Section -->
+
+
+
+<div class="untree_co-section product-section before-footer-section">
+	<div class="container">
+		<div class="row">
+				{% for i in shop %}
+			<!-- Start Column 1 -->
+			<div class="col-12 col-md-4 col-lg-3 mb-5">
+				<a class="product-item" href="#">
+					<img src="{{ i.image.url }}" class="img-fluid product-thumbnail">
+					<h3 class="product-title">{{ i.title }}</h3>
+					<strong class="product-price">${{ i.price }}</strong>
+					<span class="icon-cross">
+						<img src="/static/images/cross.svg" class="img-fluid">
+					</span>
+				</a>
+			</div>
+			<!-- End Column 1 -->
+			{% endfor %}
+
+
+		</div>
+	</div>
+</div>
+
+{% endblock %}
+
+
+<!--&lt;!&ndash; Start Hero Section &ndash;&gt;-->
+<!--	<div class="hero">-->
+<!--		<div class="container">-->
+<!--			<div class="row justify-content-between">-->
+<!--				<div class="col-lg-5">-->
+<!--					<div class="intro-excerpt">-->
+<!--						<h1>Shop</h1>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--				<div class="col-lg-7">-->
+
+<!--				</div>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--	</div>-->
+<!--&lt;!&ndash; End Hero Section &ndash;&gt;-->
+
+
+
+<!--<div class="untree_co-section product-section before-footer-section">-->
+<!--	<div class="container">-->
+<!--		<div class="row">-->
+
+<!--			&lt;!&ndash; Start Column 1 &ndash;&gt;-->
+<!--			<div class="col-12 col-md-4 col-lg-3 mb-5">-->
+<!--				<a class="product-item" href="#">-->
+<!--					<img src="/static/images/product-3.png" class="img-fluid product-thumbnail">-->
+<!--					<h3 class="product-title">Nordic Chair</h3>-->
+<!--					<strong class="product-price">$50.00</strong>-->
+
+<!--					<span class="icon-cross">-->
+<!--						<img src="/static/images/cross.svg" class="img-fluid">-->
+<!--					</span>-->
+<!--				</a>-->
+<!--			</div>-->
+<!--			&lt;!&ndash; End Column 1 &ndash;&gt;-->
+
+<!--			&lt;!&ndash; Start Column 2 &ndash;&gt;-->
+<!--			<div class="col-12 col-md-4 col-lg-3 mb-5">-->
+<!--				<a class="product-item" href="#">-->
+<!--					<img src="/static/images/product-1.png" class="img-fluid product-thumbnail">-->
+<!--					<h3 class="product-title">Nordic Chair</h3>-->
+<!--					<strong class="product-price">$50.00</strong>-->
+
+<!--					<span class="icon-cross">-->
+<!--						<img src="/static/images/cross.svg" class="img-fluid">-->
+<!--					</span>-->
+<!--				</a>-->
+<!--			</div>-->
+<!--			&lt;!&ndash; End Column 2 &ndash;&gt;-->
+
+<!--			&lt;!&ndash; Start Column 3 &ndash;&gt;-->
+<!--			<div class="col-12 col-md-4 col-lg-3 mb-5">-->
+<!--				<a class="product-item" href="#">-->
+<!--					<img src="/static/images/product-2.png" class="img-fluid product-thumbnail">-->
+<!--					<h3 class="product-title">Kruzo Aero Chair</h3>-->
+<!--					<strong class="product-price">$78.00</strong>-->
+
+<!--					<span class="icon-cross">-->
+<!--						<img src="/static/images/cross.svg" class="img-fluid">-->
+<!--					</span>-->
+<!--				</a>-->
+<!--			</div>-->
+<!--			&lt;!&ndash; End Column 3 &ndash;&gt;-->
+
+<!--			&lt;!&ndash; Start Column 4 &ndash;&gt;-->
+<!--			<div class="col-12 col-md-4 col-lg-3 mb-5">-->
+<!--				<a class="product-item" href="#">-->
+<!--					<img src="/static/images/product-3.png" class="img-fluid product-thumbnail">-->
+<!--					<h3 class="product-title">Ergonomic Chair</h3>-->
+<!--					<strong class="product-price">$43.00</strong>-->
+
+<!--					<span class="icon-cross">-->
+<!--						<img src="/static/images/cross.svg" class="img-fluid">-->
+<!--					</span>-->
+<!--				</a>-->
+<!--			</div>-->
+<!--			&lt;!&ndash; End Column 4 &ndash;&gt;-->
+
+
+<!--			&lt;!&ndash; Start Column 1 &ndash;&gt;-->
+<!--			<div class="col-12 col-md-4 col-lg-3 mb-5">-->
+<!--				<a class="product-item" href="#">-->
+<!--					<img src="/static/images/product-3.png" class="img-fluid product-thumbnail">-->
+<!--					<h3 class="product-title">Nordic Chair</h3>-->
+<!--					<strong class="product-price">$50.00</strong>-->
+
+<!--					<span class="icon-cross">-->
+<!--						<img src="/static/images/cross.svg" class="img-fluid">-->
+<!--					</span>-->
+<!--				</a>-->
+<!--			</div>-->
+<!--			&lt;!&ndash; End Column 1 &ndash;&gt;-->
+
+<!--			&lt;!&ndash; Start Column 2 &ndash;&gt;-->
+<!--			<div class="col-12 col-md-4 col-lg-3 mb-5">-->
+<!--				<a class="product-item" href="#">-->
+<!--					<img src="/static/images/product-1.png" class="img-fluid product-thumbnail">-->
+<!--					<h3 class="product-title">Nordic Chair</h3>-->
+<!--					<strong class="product-price">$50.00</strong>-->
+
+<!--					<span class="icon-cross">-->
+<!--						<img src="/static/images/cross.svg" class="img-fluid">-->
+<!--					</span>-->
+<!--				</a>-->
+<!--			</div>-->
+<!--			&lt;!&ndash; End Column 2 &ndash;&gt;-->
+
+<!--			&lt;!&ndash; Start Column 3 &ndash;&gt;-->
+<!--			<div class="col-12 col-md-4 col-lg-3 mb-5">-->
+<!--				<a class="product-item" href="#">-->
+<!--					<img src="/static/images/product-2.png" class="img-fluid product-thumbnail">-->
+<!--					<h3 class="product-title">Kruzo Aero Chair</h3>-->
+<!--					<strong class="product-price">$78.00</strong>-->
+
+<!--					<span class="icon-cross">-->
+<!--						<img src="/static/images/cross.svg" class="img-fluid">-->
+<!--					</span>-->
+<!--				</a>-->
+<!--			</div>-->
+<!--			&lt;!&ndash; End Column 3 &ndash;&gt;-->
+
+<!--			&lt;!&ndash; Start Column 4 &ndash;&gt;-->
+<!--			<div class="col-12 col-md-4 col-lg-3 mb-5">-->
+<!--				<a class="product-item" href="#">-->
+<!--					<img src="/static/images/product-3.png" class="img-fluid product-thumbnail">-->
+<!--					<h3 class="product-title">Ergonomic Chair</h3>-->
+<!--					<strong class="product-price">$43.00</strong>-->
+
+<!--					<span class="icon-cross">-->
+<!--						<img src="/static/images/cross.svg" class="img-fluid">-->
+<!--					</span>-->
+<!--				</a>-->
+<!--			</div>-->
+<!--			&lt;!&ndash; End Column 4 &ndash;&gt;-->
+
+<!--		</div>-->
+<!--	</div>-->
+<!--</div>-->
+

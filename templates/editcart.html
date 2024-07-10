@@ -1,0 +1,56 @@
+{% extends 'Base/base.html' %}
+
+{% block start %}
+<div class="hero">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-lg-5">
+                <div class="intro-excerpt">
+                    <h1>Edit Cart Item</h1>
+                </div>
+            </div>
+            <div class="col-lg-7"></div>
+        </div>
+    </div>
+</div>
+
+<div class="container table-container">
+    <form method="post" action="{% url 'editcart' product.id %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        <table class="table table-striped table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ product.id }}</td>
+                    <td>
+                        {% if product.image_url %}
+                            <img src="{{ product.image_url }}" alt="{{ product.name }}" style="max-width: 100px; height: auto;">
+                        {% else %}
+                            No image
+                        {% endif %}
+                        <input type="file" name="product_image">
+
+                    </td>
+                    <td><input type="text" name="product_name" value="{{ product.name }}"></td>
+                    <td><input type="number" name="product_price" value="{{ product.price }}" step="0.01"></td>
+                    <td><input type="number" name="product_quantity" value="{{ product.quantity }}" min="1"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="row">
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-dark btn-sm btn-block">Save Changes</button>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}
